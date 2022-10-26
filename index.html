@@ -3,8 +3,42 @@
     <link rel="stylesheet" href="./styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
   </head>
-  <body>
-    
-  </body>
+  <body class="body-container">
+    <section class="header">
+      <div class="header-box">What's for Dinner?</div>
+      <div class="add-recipe-button">
+      <button class="add-button" type="submit">ADD A RECIPE</button>
+    </div>
+    </section>
+    <main class="main-container">
+      <div class="button-box">
+        <h2>What are you looking for?</h2>
+      <form class="radio-buttons">
+        <div>
+        <input type="radio" id="Side" 
+        name="radio" value="Side"><label for="Side">Side</label>
+        </div>
+        <div>
+        <input type="radio" id="main-dish" 
+        name="radio" value="main-dish"><label for="main-dish">Main Dish</label>
+        </div>
+        <div>
+        <input type="radio" id="dessert" 
+        name="radio" value="dessert"><label for="dessert">Dessert</label>
+        </div>
+        <div>
+        <input type="radio" id="entire-meal" 
+        name="radio" value="entire-meal"><label for="entire-meal">Entire Meal</label>
+        </div>
+    </form>
+      <div class="button-div">
+    <button class="recipe-button" type="'submit">LET'S COOK</button>
+      </div>
+      </div>
+      <div class="recipe-box">
+        <img class="pot-image" src="./assets/cookpot.svg">
+      </div>
+    </main>
+   </body>
   <script type="text/javascript" src="main.js"></script>
 </html>
