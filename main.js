@@ -8,7 +8,7 @@ var sides = [
 "Caeser Salad",
 "Shrimp Summer Rolls",
 "Garlic Butter Mushrooms",
-"Hush Puppies",
+"Hush Puppies"
 ];
 
 var mains = [
@@ -24,7 +24,7 @@ var mains = [
 "Empanadas",
 "Chicken Fried Rice",
 "Sheet Pan Fajitas",
-"Margarita Pizza", 
+"Margarita Pizza" 
 ];
 
 var desserts = [
@@ -45,7 +45,7 @@ var desserts = [
 "Key Lime Pie",
 "Tart Tatin",
 "Croissants",
-"Eclairs", 
+"Eclairs" 
 ];
 
 //--------------------------------------->Query Selectors<--------------------------------------
@@ -56,42 +56,40 @@ var mainDishButton = document.querySelector('#main-dish');
 var dessertButton = document.querySelector('#dessert');
 var entireMealButton = document.querySelector('#entire-meal');
 var recipes = document.querySelector('.recipes');
-var potImage = document.querySelector('pot-image');
-
+var recipeBox = document.querySelector('.recipe-box');
+var cookPot = document.querySelector('.pot-image');
+var clearButton = document.querySelector('.clear-button');
+var clearButtonBox = document.querySelector('.clear-button-box');
 
 //--------------------------------------->Event Listeners<-------------------------------------
 
-letsCookButton.addEventListener('click', showRecipes);
-// addRecipeButton = addEventListener('click', function);
+letsCookButton.addEventListener('click', displayRecipe);
+// clearButtonBox = addEventListener('click', clearRecipe);
 
 //---------------------------------------->Functions<------------------------------------------
 
 function chooseAMeal() {
   if (sideDishButton.checked === true) {
-    recipes.innerText = [getRandomIndex(sides)]
+    recipes.innerText = sides[getRandomRecipe(sides)]
   } else if (mainDishButton.checked === true) {
-    recipes.innerText = [getRandomIndex(mains)]
+    recipes.innerText = mains[getRandomRecipe(mains)]
   } else if (dessertButton.checked === true) {
-    recipes.innerText = [getRandomIndex(desserts)]
-  // } else if (entireMealButton.checked === true) {
-  //   recipes.innerText = [getRandomRecipe(sides)], 
-  //[getRandomRecipe(mains)], [getRandomRecipe(desserts)]
-  console.log(recipes.innerText = [getRandomRecipe(mains)])
+    recipes.innerText = desserts[getRandomRecipe(desserts)]
+  } else if (entireMealButton.checked === true) {
+    recipes.innerText = `You should make: 
+    ${mains[getRandomRecipe(mains)]} with a side of 
+    ${sides[getRandomRecipe(sides)]} and ${desserts[getRandomRecipe(desserts)]} for dessert!`
   } else {
-    showCookPot()
-  }
+    clearRecipe()
+ }
 };
 
-function showCookPot() {
-  show(potImage);
-  hide(recipes);
-}
-
-function showRecipes() {
-  chooseAMeal()
+function displayRecipe() {
   show(recipes)
-  
-}
+  show(clearButtonBox)
+  hide(cookPot)
+  chooseAMeal()
+};
 
 //--------------------------------------->Utility Functions<-----------------------------------
 
@@ -103,6 +101,8 @@ function hide(elements) {
   elements.classList.add('hidden')
 };
 
-function getRandomIndex(array) {
-    return Math.floor(Math.random() * array.length);
+function getRandomRecipe(array) {
+  return Math.floor(Math.random() * array.length);
 };
+
+
