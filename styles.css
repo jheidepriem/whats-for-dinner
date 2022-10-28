@@ -32,6 +32,7 @@ body {
   width: 6vw;
   height: 2.5vh;
   border-radius: 7px;
+  border: none;
   font-size: smaller;
   cursor: pointer;
 }
@@ -83,11 +84,12 @@ h2 {
 
 .recipe-button {
   background-color: #0fb9b1;
-  border-color: #0fb9b1;
+  border: none;
   border-radius: 5px;
   font-size: smaller;
   cursor: pointer;
   margin-top: 3px;
+  padding: 5px 26px;
 }
 
 .recipe-box {
@@ -101,15 +103,14 @@ h2 {
 } 
 
 .recipes {
-  width: 20vw;
-  height: 26vh;
+  width: 19vw;
+  height: 35vh;
   font-size: larger;
   text-align: center;
   display: flex;
   justify-content: center;
   flex-direction: column;
-  align-items: center;
-  margin: 0
+  margin: 0;
 }
 
 .pot-image {
@@ -129,12 +130,46 @@ h2 {
 .clear-button {
   background-color: #95a5a6;
   border-color: #95a5a6;
+  border: none;
   font: white;
   border-radius: 5px;
   cursor: pointer;
+  padding: 4px 20px;
+}
+
+.new-recipe-footer {
+  background-color: rgba(225, 225, 225, .9);
+  width: 100vw;
+  height: 6vh;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-start;
+  margin-bottom: 0;
+}
+
+.new-recipe-footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 5vh
+}
+
+.new-recipe-form {
+  padding-left: 15px;
+  width: 40vw;
+}
+
+.add-new-button {
+  background-color: #0fb9b1;
+  border-radius: 5px;
+  border: none;
+  padding: 4px 25px;
 }
 
 .hidden{
   display: none;
 }
 
+span {
+  color: red;
+}

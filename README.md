@@ -37,7 +37,7 @@ ______________________________________________________
 
 ### Preview of App:
 [//]: <> (Provide ONE gif or screenshot of your application - choose the "coolest" piece of functionality to show off.)
-
+Screen Shot 2022-10-22 at 7.51.35 PM.png
 ### Context:
 [//]: <> (Give some context for the project here. How long did you have to work on it? How far into the Turing program are you?)
 

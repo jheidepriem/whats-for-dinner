@@ -49,7 +49,9 @@ var desserts = [
 ];
 
 //--------------------------------------->Query Selectors<--------------------------------------
+
 var letsCookButton = document.querySelector('.recipe-button');
+var recipeHeader = document.querySelector('.recipe-header')
 var addRecipeButton = document.querySelector('.add-button');
 var sideDishButton = document.querySelector('#side');
 var mainDishButton = document.querySelector('#main-dish');
@@ -60,36 +62,56 @@ var recipeBox = document.querySelector('.recipe-box');
 var cookPot = document.querySelector('.pot-image');
 var clearButton = document.querySelector('.clear-button');
 var clearButtonBox = document.querySelector('.clear-button-box');
+var errorMessage = document.querySelector('.error-message');
+var recipeHeader = document.querySelector('.recipe-header');
+var addNewButton = document.querySelector('add-new-button');
+var recipeFormFooter = document.querySelector('new-recipe-footer');
+
 
 //--------------------------------------->Event Listeners<-------------------------------------
 
 letsCookButton.addEventListener('click', displayRecipe);
-// clearButtonBox = addEventListener('click', clearRecipe);
+clearButton.addEventListener('click', clearRecipe);
+
+
 
 //---------------------------------------->Functions<------------------------------------------
 
 function chooseAMeal() {
+  var recipeHeader = "You should make:"
   if (sideDishButton.checked === true) {
-    recipes.innerText = sides[getRandomRecipe(sides)]
+    recipes.innerText = `${recipeHeader} 
+    ${sides[getRandomRecipe(sides)]}`
   } else if (mainDishButton.checked === true) {
-    recipes.innerText = mains[getRandomRecipe(mains)]
+    recipes.innerText = `${recipeHeader} 
+    ${mains[getRandomRecipe(mains)]}`
   } else if (dessertButton.checked === true) {
-    recipes.innerText = desserts[getRandomRecipe(desserts)]
+    recipes.innerText = `${recipeHeader} 
+    ${desserts[getRandomRecipe(desserts)]}`
   } else if (entireMealButton.checked === true) {
-    recipes.innerText = `You should make: 
+    recipes.innerText = `${recipeHeader} 
     ${mains[getRandomRecipe(mains)]} with a side of 
-    ${sides[getRandomRecipe(sides)]} and ${desserts[getRandomRecipe(desserts)]} for dessert!`
-  } else {
-    clearRecipe()
- }
+    ${sides[getRandomRecipe(sides)]} and 
+    ${desserts[getRandomRecipe(desserts)]} for dessert!`
+    } else {
+      recipes.innerText = `You must choose a meal option!`
+    }
 };
 
 function displayRecipe() {
-  show(recipes)
-  show(clearButtonBox)
-  hide(cookPot)
   chooseAMeal()
+  hide(cookPot)
+  show(recipes)
+  show(clearButton)
 };
+
+function clearRecipe() {
+  hide(recipes)
+  hide(clearButton)
+  show(cookPot)
+};
+
+
 
 //--------------------------------------->Utility Functions<-----------------------------------
 
@@ -102,7 +124,5 @@ function hide(elements) {
 };
 
 function getRandomRecipe(array) {
-  return Math.floor(Math.random() * array.length);
+  return Math.floor(Math.random() * array.length)
 };
-
-
