@@ -50,30 +50,30 @@ var desserts = [
 
 //--------------------------------------->Query Selectors<--------------------------------------
 
-var letsCookButton = document.querySelector('.recipe-button');
-var recipeHeader = document.querySelector('.recipe-header')
-var addRecipeButton = document.querySelector('.add-button');
-var sideDishButton = document.querySelector('#side');
-var mainDishButton = document.querySelector('#main-dish');
-var dessertButton = document.querySelector('#dessert');
-var entireMealButton = document.querySelector('#entire-meal');
-var recipes = document.querySelector('.recipes');
-var recipeBox = document.querySelector('.recipe-box');
-var cookPot = document.querySelector('.pot-image');
+var addNewButton = document.querySelector('.add-new-button');
+var addRecipeButton = document.querySelector('.add-recipe-button');
 var clearButton = document.querySelector('.clear-button');
 var clearButtonBox = document.querySelector('.clear-button-box');
+var cookPot = document.querySelector('.pot-image');
+var dessertButton = document.querySelector('#dessert');
 var errorMessage = document.querySelector('.error-message');
+var entireMealButton = document.querySelector('#entire-meal');
+var letsCookButton = document.querySelector('.recipe-button');
+var mainDishButton = document.querySelector('#main-dish');
+var recipes = document.querySelector('.recipes');
+var recipeBox = document.querySelector('.recipe-box');
+var recipeDropDown = document.querySelector('#drop-down');
+var recipeFormFooter = document.querySelector('.new-recipe-footer');
 var recipeHeader = document.querySelector('.recipe-header');
-var addNewButton = document.querySelector('add-new-button');
-var recipeFormFooter = document.querySelector('new-recipe-footer');
-
+var recipeNameBox = document.querySelector('#recipe-name');
+var sideDishButton = document.querySelector('#side');
 
 //--------------------------------------->Event Listeners<-------------------------------------
 
-letsCookButton.addEventListener('click', displayRecipe);
+addNewButton.addEventListener('click', addNewRecipe);
+addRecipeButton.addEventListener('click', addARecipe);
 clearButton.addEventListener('click', clearRecipe);
-
-
+letsCookButton.addEventListener('click', displayRecipe);
 
 //---------------------------------------->Functions<------------------------------------------
 
@@ -98,6 +98,16 @@ function chooseAMeal() {
     }
 };
 
+function addNewRecipe(event) {
+  event.preventDefault()
+  recipes.innerText = recipeNameBox.value
+  hide(cookPot)
+  show(recipes)
+  show(clearButton)
+  storeRecipe()
+  resetForm()
+};
+
 function displayRecipe() {
   chooseAMeal()
   hide(cookPot)
@@ -111,7 +121,28 @@ function clearRecipe() {
   show(cookPot)
 };
 
+function storeRecipe() {
+  if (recipeDropDown.value === 'sides') {
+    sides.push(recipeNameBox.value)
+  } else if (recipeDropDown.value === 'main-dish') {
+    sides.push(recipeNameBox.value)
+  } else if (recipeDropDown.value === 'desserts') {
+    sides.push(recipeNameBox.value)
+  }
+};
 
+function resetForm() {
+  recipeDropDown.value = ''
+  recipeNameBox.value = ''
+  sideDishButton.value = ''
+  mainDishButton.value = ''
+  dessertButton.value = ''
+  entireMealButton.value = ''
+};
+
+function addARecipe() {
+  show(recipeFormFooter)
+};
 
 //--------------------------------------->Utility Functions<-----------------------------------
 
