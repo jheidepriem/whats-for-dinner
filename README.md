@@ -30,22 +30,26 @@ ______________________________________________________
 # What's for Dinner? 
 
 ### Abstract:
-[//]: <> (Briefly describe what you built and its features. What problem is the app solving? How does this application solve that problem?)
+- Don't know what to make for dinner? What's for Dinner allows the user to choose from several different meal categories, including sides, mains, and desserts. Users can also add their own recipe to each category. 
 
 ### Installation Instructions:
-[//]: <> (What steps does a person have to take to get your app cloned down and running?)
-
+- Fork this project to your own Github account
+- Clone the repository to your local machine
+- cd into the project
+- Read this README thoroughly, then begin working!
 ### Preview of App:
-[//]: <> (Provide ONE gif or screenshot of your application - choose the "coolest" piece of functionality to show off.)
-Screen Shot 2022-10-22 at 7.51.35 PM.png
+
 ### Context:
-[//]: <> (Give some context for the project here. How long did you have to work on it? How far into the Turing program are you?)
+I'm in Mod1 as a repeater. The html and css took me about an hour and I finished the functionality the following day. 
 
 ### Contributors:
-[//]: <> (Who worked on this application? Link to their GitHubs.)
+I built the page and you can find my repository [here](https://github.com/jheidepriem/whats-for-dinner)
 
 ### Learning Goals:
-[//]: <> (What were the learning goals of this project? What tech did you work with?)
+- Gain experience building an application that utilizes HTML, CSS and JavaScript
+- Write HTML and CSS to match a provided comp
+- Understand how to listen to and respond to user events
+- Individualize your programming skill set
 
 ### Wins + Challenges:
-[//]: <> (What are 2-3 wins you have from this project? What were some challenges you faced - and how did you get over them?)
+I am definitely feeling much better about CSS and it was way less of a headache than on my last several projects. 
