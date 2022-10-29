@@ -17,10 +17,10 @@
 
 
 ### Context:
-I'm in Mod1 as a repeater. The html and css took me about an hour and I finished the functionality the following day. 
+- I'm in Mod1 as a repeater. The html and css took me about an hour and I finished the functionality the following day. 
 
 ### Contributors:
-I built the page and you can find my repository [here](https://github.com/jheidepriem/whats-for-dinner)
+- I built the page and you can find my repository [here](https://github.com/jheidepriem/whats-for-dinner)
 
 ### Learning Goals:
 - Gain experience building an application that utilizes HTML, CSS and JavaScript
@@ -29,4 +29,4 @@ I built the page and you can find my repository [here](https://github.com/jheide
 - Individualize your programming skill set
 
 ### Wins + Challenges:
-I am definitely feeling much better about CSS and it was way less of a headache than on my last several projects. 
+- I am definitely feeling much better about CSS and it was way less of a headache than on my last several projects. 
