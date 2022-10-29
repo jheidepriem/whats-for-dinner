@@ -118,6 +118,7 @@ function displayRecipe() {
 function clearRecipe() {
   hide(recipes)
   hide(clearButton)
+  hide(recipeFormFooter)
   show(cookPot)
 };
 
