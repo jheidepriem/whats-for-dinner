@@ -8,7 +8,7 @@
       <div class="header-box">What's for Dinner?</div>
       <div class="add-recipe-button">
         <button class="add-button" type="submit">ADD A RECIPE</button>
-    </div>
+      </div>
     </section>
     <main class="main-container">
       <div class="button-box">
@@ -46,7 +46,12 @@
     <footer class="new-recipe-footer hidden">
       <form class="new-recipe-form">
         <label for="recipe-type">Recipe Type:</label>
-        <input type="text" id="recipe-type" value="">
+        <select name="recipe-type" id="drop-down">
+          <option value="" selected disabled hidden>Pick One</option>
+          <option value="sides">Sides</option>
+          <option value="main-dish">Main Dish</option>
+          <option value="desserts">Desserts</option>
+        </select>
         <label for="recipe-name">Recipe Name:</label>
         <input type="text" id="recipe-name" value=""> 
         <button class="add-new-button" type="submit">ADD NEW</button>
