@@ -9,7 +9,7 @@
 - cd into the project
 - Read this README thoroughly, then begin working!
 
-### Preview of App:
+### Preview of App: [Open here](https://jheidepriem.github.io/whats-for-dinner/)
 
 ![Screen Shot 2022-10-29 at 3 01 07 PM (2)](https://user-images.githubusercontent.com/108428451/198850976-e8bab396-348a-4eae-b53d-8d53a708be9b.png)
 ![Screen Shot 2022-10-29 at 3 01 12 PM (2)](https://user-images.githubusercontent.com/108428451/198850998-53bd6feb-7324-4f4e-80bb-c9335db0b381.png)
